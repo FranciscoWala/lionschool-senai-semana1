@@ -1,0 +1,131 @@
+* {
+    margin:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0;
+}
+
+body {
+    font-family:'Roboto', Sans-serif;
+    height: 100vh;
+}
+
+header{
+    display: flex;
+    width: 100vw;
+    height: 20vh;
+    background-color: #3347B0;
+    justify-items: center;
+    align-items: center;
+    /* border: #ff0000 1px solid; */
+}
+
+.itens_separados {
+    display: flex;
+    width: 100vw;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10%;
+        /* border: #ff0000 1px solid; */
+}
+
+main {
+    display: flex;
+    height: 60vh;
+    width: 100vw;
+    /* border: #000000 1px solid; */
+    justify-content: center;
+    align-items: center;
+    border: #ff0000 1px solid;
+}
+
+.conteiner_principal {
+    display: flex;
+    width: 80vw;
+    height: 40vh;
+    justify-content: center;
+    gap: 5vw;
+    /* border: #ff0000 1px solid; */
+}
+
+.texto {
+    display: flex;
+    flex-direction: column;
+    /* border: #ff0000 1px solid; */
+    color: black;
+}
+
+.texto h1 {
+    font-size: 5rem;
+    font-weight: 200;
+}
+
+.texto span {
+    color: #3347B0;
+    font-weight: bold;
+}
+
+.coluna_esquerda {
+    display: flex;
+    flex-direction: column;
+    /* border: #001eff 1px solid; */
+    gap: 3vh;
+}
+
+.dispositivos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coluna_central {
+    height: 30vh;
+    justify-content: center;
+    align-items: center;
+    /* border: #001eff 1px solid; */
+}
+
+.imagem_estudante {
+    height: 38vh;
+    /* border: #000000 1px solid; */
+}
+
+.imagem_estudante img {
+    height: 100%;
+}
+
+.coluna_direita {
+    display: flex;
+    height: 30vh;
+    width: 350px;
+    flex-direction: column;
+    border: #000000 1px solid;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    font-size: 3rem;
+}
+
+.curso_DS {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: #3347B0;
+    font-size: 200;
+
+}
+
+.curso_REDES {
+    display: flex;
+    width: 100%;
+    height: 15vh;
+    background-color: #3347B0;
+
+}
+
+footer {
+    width: 100vw;
+    height: 20vh;
+    background-color: #3347B0;
+}
