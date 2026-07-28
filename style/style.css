@@ -26,7 +26,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 10%;
-        /* border: #ff0000 1px solid; */
+    /* border: #ff0000 1px solid; */
 }
 
 main {
@@ -36,7 +36,7 @@ main {
     /* border: #000000 1px solid; */
     justify-content: center;
     align-items: center;
-    border: #ff0000 1px solid;
+    /* border: #ff0000 1px solid; */
 }
 
 .conteiner_principal {
@@ -99,12 +99,20 @@ main {
     height: 30vh;
     width: 350px;
     flex-direction: column;
-    border: #000000 1px solid;
+    /* border: #000000 1px solid; */
     gap: 60px;
     align-items: center;
     justify-content: center;
     justify-items: center;
     font-size: 3rem;
+    color: #fafafa;
+}
+
+.coluna_direita img{
+    display: flex;
+    width: 96px;
+    height: 77px;
+    margin: 30px;
 }
 
 .curso_DS {
@@ -113,7 +121,9 @@ main {
     height: 15vh;
     background-color: #3347B0;
     font-size: 200;
-
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
 }
 
 .curso_REDES {
@@ -121,11 +131,37 @@ main {
     width: 100%;
     height: 15vh;
     background-color: #3347B0;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.4);
+}
 
+.coluna_esquerda_ftr {
+    display: flex;
+    flex-direction: column;
+    color: #fafafa;
+    justify-content: center;
+    gap: 5px;
+    /* border: #000000 1px solid; */
+}
+
+.coluna_central_ftr {
+    color: #fafafa;
+}
+
+.social_images {
+    display: flex;
+    gap: 20px;
 }
 
 footer {
+    padding: 5%;
+    display: flex;
+    justify-content: space-between;
     width: 100vw;
     height: 20vh;
     background-color: #3347B0;
+    font-size: 1.3rem;
+    align-items: center;
+    font-weight: 300;
 }
