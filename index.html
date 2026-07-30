@@ -1,24 +1,55 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LionSchool</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <script src="./scripts/main.js" defer type="module"></script>
+    <script src="./scripts/aluno_tela.js" defer type="module"></script>
     <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="/style/style_alunos.css">
 </head>
+
 <body>
     <header class="faixa_azul_header">
         <div class="itens_separados">
-                <img src="/imagens-projeto/logo-lionschool.png" alt=" Imagem logo com texto LionSchool">
-                <img src="/imagens-projeto/sair.png" alt=" Ícone com texto de saída">
+            <img src="/imagens-projeto/logo-lionschool.png" alt=" Imagem logo com texto LionSchool">
+            <img src="/imagens-projeto/sair.png" alt=" Ícone com texto de saída">
         </div>
     </header>
+    <header class="sub_header">
+        <div class="status">
+            <span>Status</span>
+            <div class="menu">
+                <div class="menu_conteudo">
+                    <span>Status</span>
+                    <span>Finalizado</span>
+                    <span>Cursando</span>
+                </div>
+            </div>
+        </div>
+        <div class="legenda">
+            <span>LEGENDA</span>
+            <div class="conteinar_legenda">
+                <div class="cursando">
+                    <div class="quadrado_cursando">
+                    </div>
+                    <span>Cursando</span>
+                </div>
+                <div class="finalizado">
+                    <div class="quadrado_finalizado"></div>
+                    <span>Finalizado</span>
+                </div>
+            </div>
 
-    <main id ="container_geral">
+        </div>
+    </header>
+    <main id="container_geral">
         <!-- <div class="conteiner_principal"> correto
             
             <div class="coluna_esquerda">
@@ -34,7 +65,7 @@
 
             </div>
 
-            <div class="coluna_central">
+            <div class="coluna_central">`
                 
                 <div class="imagem_estudante">
                     <img src="/imagens-projeto/studant.png" alt="imagem garota estudante">
@@ -54,9 +85,15 @@
             </div>
 
         </div> -->
-        
+
+    <div class="card_conteiner">
+        <div class="conteiner_imagem">
+            <img src="./imagens-projeto/logo-lionschool.png" alt="">
+            <span>Francisco Wala</span>
+        </div>
+    </div>
+
     </main>
-        
     <footer class="faixa_azul_footer">
 
         <div class="coluna_esquerda_ftr">
@@ -70,7 +107,7 @@
             </div>
             <div>
                 <img src="./imagens-projeto/icon-map.png" alt="icone-map">
-                <span>Rua tcc, 211,  Centro, Jandira</span>
+                <span>Rua tcc, 211, Centro, Jandira</span>
             </div>
         </div>
 
@@ -89,4 +126,5 @@
 
     </footer>
 </body>
+
 </html>

@@ -4,26 +4,7 @@ import { criar } from "../utils/gerador.js";
 
 const ROTABASE = "https://lion-school-phbo.onrender.com"
 
-export async function getAllCursos() {
-    let url = `${ROTABASE}/cursos`;
 
-    try {
-        let response = await fetch(url);
-        
-        if (response.ok) {
-            let respostaAPI = await response.json();
-            console.log(respostaAPI)
-            return respostaAPI;
-            
-        } else {
-            console.log(response.status);
-            return false;
-        }
-    } catch (error) {
-        console.log(error);
-        return false;
-    }
-}
 async function criarTelaPrincipal () {
 //Container principal**********************************************************
     const conteiner_principal =  criar.ELEMENTO("div",["conteiner_principal"])//Primeira div
@@ -104,4 +85,5 @@ async function criarTelaPrincipal () {
     container_geral.append(conteiner_principal)
 
 }
-criarTelaPrincipal()
+
+//criarTelaPrincipal()
