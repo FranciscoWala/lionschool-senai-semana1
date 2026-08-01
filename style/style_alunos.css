@@ -82,4 +82,18 @@
     height: 280px;
     background: #3347B0;
     border: #0023e9 1px solid;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.conteiner_imagem {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    width: 180px;
+    height: 180px;
+    flex-direction: column;
+    text-align: center;
+    color: #fafafa;
+    gap: 16px;
+    font-size: 18px;
 }

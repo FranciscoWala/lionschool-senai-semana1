@@ -2,9 +2,6 @@
 
 import { criar } from "../utils/gerador.js"; 
 
-const ROTABASE = "https://lion-school-phbo.onrender.com"
-
-
 async function criarTelaPrincipal () {
 //Container principal**********************************************************
     const conteiner_principal =  criar.ELEMENTO("div",["conteiner_principal"])//Primeira div
