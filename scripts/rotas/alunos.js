@@ -26,6 +26,26 @@ export async function buscarDadosAluno(){
         console.log(`Erro no catch de buscar dados${error}`)
     }
 
-    
+}
+
+export async function buscarDadosCurso(){
+
+    try {
+        let result = await fetch(`${URLBASE}/cursos`)
+        
+        console.log(result)
+
+        if (!result.ok) {
+            throw new Error(`Erro no result do buscarDados cursos ${result}`)
+        }
+
+        const DADOS = await result.json()
+
+        return DADOS
+        console.log(DADOS)
+
+    } catch (error) {
+        console.log(`Erro no catch de buscar dados cursos${error}`)
+    }
 
 }

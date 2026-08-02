@@ -1,8 +1,10 @@
 `use strict`
 
 import { criar } from "../utils/gerador.js"; 
+import { buscarDadosCurso } from "./rotas/alunos.js";
+import { buscarDadosAluno } from "./rotas/alunos.js";
 
-async function criarTelaPrincipal () {
+export async function criarTelaPrincipal () {
 //Container principal**********************************************************
     const conteiner_principal =  criar.ELEMENTO("div",["conteiner_principal"])//Primeira div
 
@@ -62,6 +64,7 @@ async function criarTelaPrincipal () {
 
     const div_curso_ds = criar.ELEMENTO("div",["curso_DS"])
     div_curso_ds.textContent = "DS"
+    div_curso_ds.addEventListener('click',buscarDadosCurso("DS"))
 
     const img_fechamento_tag = criar.ELEMENTO("img")
     img_fechamento_tag.src = "/imagens-projeto/icon-fechamento-tag.png"
@@ -69,7 +72,7 @@ async function criarTelaPrincipal () {
 
     const div_curso_redes = criar.ELEMENTO("div",["curso_REDES"])
     div_curso_redes.textContent = "REDES"
-
+    div_curso_redes.addEventListener('click',buscarDadosCurso("REDES"))
     const img_icone_redes = criar.ELEMENTO("img")
     img_icone_redes.src = "/imagens-projeto/icon-redes.png"
     img_icone_redes.alt = "ícone de redes"
@@ -81,6 +84,18 @@ async function criarTelaPrincipal () {
     conteiner_principal.append(div_coluna_direita)
     container_geral.append(conteiner_principal)
 
+
 }
 
-//criarTelaPrincipal()
+// export async function criarBotoesCursos(){
+//     const cursos = await buscarDadosCurso()
+
+//     if(cursos.id == 1){
+        
+//     } else {
+
+//     }
+// }
+
+criarTelaPrincipal(buscarDadosCurso())
+// criarBotoesCursos()
