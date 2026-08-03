@@ -1,10 +1,11 @@
 `use strict`
 
-import { criar } from "../utils/gerador.js"; 
+import { criar } from "../utils/gerador.js";
 import { buscarDadosCurso } from "./rotas/alunos.js";
-import { buscarDadosAluno } from "./rotas/alunos.js";
+import { handleClickCurso } from "./aluno_tela.js";
 
-export async function criarTelaPrincipal () {
+export async function criarTelaPrincipal (cursos) {
+
 //Container principal**********************************************************
     const conteiner_principal =  criar.ELEMENTO("div",["conteiner_principal"])//Primeira div
 
@@ -62,40 +63,20 @@ export async function criarTelaPrincipal () {
     //Coluna Direita*************************************************************
     const div_coluna_direita = criar.ELEMENTO("div",["coluna_direita"])
 
-    const div_curso_ds = criar.ELEMENTO("div",["curso_DS"])
-    div_curso_ds.textContent = "DS"
-    div_curso_ds.addEventListener('click',buscarDadosCurso("DS"))
-
-    const img_fechamento_tag = criar.ELEMENTO("img")
-    img_fechamento_tag.src = "/imagens-projeto/icon-fechamento-tag.png"
-    img_fechamento_tag.alt = "ícone fechamento de tag"
-
-    const div_curso_redes = criar.ELEMENTO("div",["curso_REDES"])
-    div_curso_redes.textContent = "REDES"
-    div_curso_redes.addEventListener('click',buscarDadosCurso("REDES"))
-    const img_icone_redes = criar.ELEMENTO("img")
-    img_icone_redes.src = "/imagens-projeto/icon-redes.png"
-    img_icone_redes.alt = "ícone de redes"
-
-    div_curso_ds.append(img_fechamento_tag)
-    div_curso_redes.append(img_icone_redes)
-
-    div_coluna_direita.append(div_curso_ds,div_curso_redes)
+    cursos.forEach( itemCurso => {
+        const icon_Api = criar.ELEMENTO("img")
+        icon_Api.src = itemCurso.icon
+        icon_Api.alt = `ícone do ${itemCurso.nome}`
+        const div_curso = criar.ELEMENTO("div",["cursos"])
+        div_curso.addEventListener('click', async() => {
+            await handleClickCurso(itemCurso.id)
+        })
+        div_curso.append(icon_Api)
+        div_curso.append(itemCurso.sigla)
+        div_coluna_direita.append(div_curso)
+    })
     conteiner_principal.append(div_coluna_direita)
     container_geral.append(conteiner_principal)
 
-
 }
-
-// export async function criarBotoesCursos(){
-//     const cursos = await buscarDadosCurso()
-
-//     if(cursos.id == 1){
-        
-//     } else {
-
-//     }
-// }
-
-criarTelaPrincipal(buscarDadosCurso())
-// criarBotoesCursos()
+// await criarTelaPrincipal(await buscarDadosCurso())

@@ -9,17 +9,17 @@
 
 const URLBASE = "https://lion-school-phbo.onrender.com"
 
-export async function buscarDadosAluno(){
+export async function buscarDadosAlunoByCurso(curso){
 
     try {
-        let result = await fetch(`${URLBASE}/alunos`)
+        let result = await fetch(`${URLBASE}/alunos?curso_id=${curso}`)
 
         if (!result.ok) {
             throw new Error(`Erro no result do buscarDados ${result}`)
         }
 
         const DADOS = await result.json()
-
+        
         return DADOS
 
     } catch (error) {
@@ -32,8 +32,6 @@ export async function buscarDadosCurso(){
 
     try {
         let result = await fetch(`${URLBASE}/cursos`)
-        
-        console.log(result)
 
         if (!result.ok) {
             throw new Error(`Erro no result do buscarDados cursos ${result}`)
@@ -42,7 +40,6 @@ export async function buscarDadosCurso(){
         const DADOS = await result.json()
 
         return DADOS
-        console.log(DADOS)
 
     } catch (error) {
         console.log(`Erro no catch de buscar dados cursos${error}`)

@@ -29,10 +29,8 @@
 
 #container_geral {
     width: 100%;
-    display: grid;
-    grid-template-columns:repeat(5,20rem) ;
-    gap: 20px;
-    border: #0023e9 1px solid;
+    height: 80vh;
+    /* border: #0023e9 1px solid; */
 }
 
 .cursando{
@@ -101,7 +99,11 @@
     background: #E5B657;
 }
 
-
+.conteiner_cards {
+    display: grid;
+    grid-template-columns:repeat(5,20rem) ;
+    gap: 20px;
+}
 
 .conteiner_imagem {
     padding: 10px 0px;
